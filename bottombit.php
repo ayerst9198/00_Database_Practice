@@ -24,7 +24,7 @@
 
         <form method="post" action="author_search.php" enctype="multipart/form-data" >
 
-        <input class="search" type="text" name="author" size="40" value="" required placeholder="Title..." />
+        <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..." />
 
         <input class="submit" type ="submit" name="find_author" value="Search" />
         
@@ -43,8 +43,33 @@
         
         </form>
         <!-- end of genre search !-->
+        <hr />
 
-        Rating Search<br />
+        <!-- start of rating form !-->
+
+        <form method="post" action="rating_search.php" enctype="multipart/form-data">
+        
+            <select class="half_width" name="amount">
+                <option value="exactly" selected>Exactly...</option>
+                <option value="more">At least...</option>
+                <option value="less">At most...</option>
+            </select>
+
+            <select class="half_width" name="stars">
+                <option value=1>&#9733;</option>
+                <option value=2>&#9733;&#9733;</option>
+                <option value=3>&#9733;&#9733;&#9733;</option>
+                <option value=4>&#9733;&#9733;&#9733;&#9733;</option>
+                <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+            </select>
+
+            <input type="submit" class="submit" name="find_rating" value="Search" />
+            
+            
+            
+        </form>
+
+        <!-- end of rating form !-->
 
 
         </div> <!-- / side bar -->
