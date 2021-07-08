@@ -1,16 +1,24 @@
-<?php
+<?php include "topbit.php";
 
-    include "topbit.php";
-    $showall_sql="SELECT * FROM `book_reviews` ORDER BY `book_reviews`.`Title` ASC";
-    $showall_query=mysqli_query($dbconnect, $showall_sql);
-    $showall_rs=mysqli_fetch_assoc($showall_query);
-    $count=mysqli_num_rows($showall_query);
+
+    // if find button pushed...
+    if(isset($_POST['find_genre']))
+
+    {
+
+    // retrieves genre and sanitizes it
+    $genre=test_input(mysqli_real_escape_string($dbconnect,$_POST['genre']));
+    
+    $find_sql="SELECT * FROM `book_reviews` WHERE `genre` LIKE '%$genre%' ORDER BY `genre` ASC";
+    $find_query=mysqli_query($dbconnect, $find_sql);
+    $find_rs=mysqli_fetch_assoc($find_query);
+    $count=mysqli_num_rows($find_query);
 
 ?>
 
 <div class="box main">
 
-    <h2>All Items</h2>
+    <h2>Genre search</h2>
 
     <?php
 
@@ -37,19 +45,19 @@
             <!-- Results go here -->
         <div class="results">
         
-        <p>Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span>
+        <p>Title: <span class="sub_heading"><?php echo $find_rs['Title']; ?></span>
         </p>
 
-        <p>Author: <span class="sub_heading"><?php echo $showall_rs['Author']; ?></span>
+        <p>Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span>
         </p>
 
-        <p>Genre: <span class="sub_heading"><?php echo $showall_rs['Genre']; ?></span>
+        <p>Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span>
         </p>
 
         <p>Rating: <span class="sub_heading">
             
             <?php 
-            for ($x=0; $x < $showall_rs['Rating']; $x++)
+            for ($x=0; $x < $find_rs['Rating']; $x++)
 
             {
                 echo "&#9733";
@@ -60,7 +68,7 @@
     
         </span></p>
 
-        <p><span class="sub_heading"><?php echo $showall_rs['Review']; ?></span>
+        <p><span class="sub_heading"><?php echo $find_rs['Review']; ?></span>
         </p>
 
         </div>  <!-- / single result -->
@@ -70,11 +78,13 @@
 
         } // end of 'do'
 
-        while($showall_rs=mysqli_fetch_assoc($showall_query));
+        while($find_rs=mysqli_fetch_assoc($find_query));
 
     } // end else
 
     // if there are results, display them
+
+    } // wnd isset
 
     ?>
 

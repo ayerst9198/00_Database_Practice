@@ -6,6 +6,7 @@
 
     session_start();
     include("config.php");
+    include("functions.php");
 
     // Connect to database...
 
@@ -45,21 +46,7 @@
         
         <div class="box banner">
             
-            <h1>Orchid Reading</h1>
+            <h1>Orchid Readings</h1>
         </div>    <!-- / banner -->
 
-        <div class="box side">
-
-        <h2>Search | <a class="side" href="show_all.php">Show All</a></h2>
-
-        <i>Type part of the title / author name if desired</i>
-
-        <hr/>
-
-        Title Search<br />
-        Author Search<br />
-        Genre Search<br />
-        Rating Search<br />
-
-
-        </div> <!-- / side bar -->
+        
