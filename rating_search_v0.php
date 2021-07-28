@@ -2,7 +2,7 @@
 
 
     // if find button pushed...
-    if(isset($_POST['find_author']))
+    if(isset($_POST['findall_author']))
 
     {
 
@@ -13,13 +13,13 @@
     if($amount=="exactly")
 
     {
-        $find_sql="SELECT * FROM `book_reviews` WHERE `Rating` = $stars ORDER BY `Title` ASC";
+        $findall_sql="SELECT * FROM `book_reviews` WHERE `Rating` = $stars ORDER BY `Title` ASC";
     }
 
 
-    $find_query=mysqli_query($dbconnect, $find_sql);
-    $find_rs=mysqli_fetch_assoc($find_query);
-    $count=mysqli_num_rows($find_query);
+    $findall_query=mysqli_query($dbconnect, $findall_sql);
+    $findall_rs=mysqli_fetch_assoc($findall_query);
+    $count=mysqli_num_rows($findall_query);
 
 ?>
 
@@ -52,19 +52,19 @@
             <!-- Results go here -->
         <div class="results">
         
-        <p>Title: <span class="sub_heading"><?php echo $find_rs['Title']; ?></span>
+        <p>Title: <span class="sub_heading"><?php echo $findall_rs['Title']; ?></span>
         </p>
 
-        <p>Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span>
+        <p>Author: <span class="sub_heading"><?php echo $findall_rs['Author']; ?></span>
         </p>
 
-        <p>Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span>
+        <p>Genre: <span class="sub_heading"><?php echo $findall_rs['Genre']; ?></span>
         </p>
 
         <p>Rating: <span class="sub_heading">
             
             <?php 
-            for ($x=0; $x < $find_rs['Rating']; $x++)
+            for ($x=0; $x < $findall_rs['Rating']; $x++)
 
             {
                 echo "&#9733";
@@ -75,7 +75,7 @@
     
         </span></p>
 
-        <p><span class="sub_heading"><?php echo $find_rs['Review']; ?></span>
+        <p><span class="sub_heading"><?php echo $findall_rs['Review']; ?></span>
         </p>
 
         </div>  <!-- / single result -->
@@ -85,7 +85,7 @@
 
         } // end of 'do'
 
-        while($find_rs=mysqli_fetch_assoc($find_query));
+        while($findall_rs=mysqli_fetch_assoc($findall_query));
 
     } // end else
 

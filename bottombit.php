@@ -4,7 +4,7 @@
 
         <i>Type part of the title / author name if desired</i>
 
-        <hr/>
+        <hr class="line"/>
 
         <!-- Start of Title Search -->
 
@@ -12,13 +12,13 @@
 
         <input class="search" type="text" name="title" size="40" value="" required placeholder="Title..." />
 
-        <input class="submit" type ="submit" name="find_title" value="Search" />
+        <input class="submit" type ="submit" name="findall_title" value="Search" />
         
         </form>
 
         <!-- end of title search -->
 
-        <hr/>
+        <hr class="line"/>
 
         <!-- start of author search !-->
 
@@ -26,12 +26,12 @@
 
         <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..." />
 
-        <input class="submit" type ="submit" name="find_author" value="Search" />
+        <input class="submit" type ="submit" name="findall_author" value="Search" />
         
         </form>
         <!-- end of author search !-->
 
-        <hr/>
+        <hr class="line"/>
 
         <!-- start of genre search !-->
 
@@ -39,35 +39,37 @@
 
         <input class="search" type="text" name="genre" size="40" value="" required placeholder="Genre..." />
 
-        <input class="submit" type ="submit" name="find_genre" value="Search" />
+        <input class="submit" type ="submit" name="findall_genre" value="Search" />
         
         </form>
         <!-- end of genre search !-->
-        <hr />
+        <hr class="line"/>
 
         <!-- start of rating form !-->
 
         <form method="post" action="rating_search.php" enctype="multipart/form-data">
         
             <select class="half_width" name="amount">
-                <option value="exactly" selected>Exactly...</option>
-                <option value="more">At least...</option>
+                <option value="exactly" >Exactly...</option>
+                <option value="more" selected>At least...</option>
                 <option value="less">At most...</option>
             </select>
 
             <select class="half_width" name="stars">
                 <option value=1>&#9733;</option>
                 <option value=2>&#9733;&#9733;</option>
-                <option value=3>&#9733;&#9733;&#9733;</option>
+                <option value=3 selected>&#9733;&#9733;&#9733;</option>
                 <option value=4>&#9733;&#9733;&#9733;&#9733;</option>
                 <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
             </select>
 
-            <input type="submit" class="submit" name="find_rating" value="Search" />
+            <input type="submit" class="submit" name="findall_rating" value="Search" />
             
             
             
         </form>
+
+        <hr class="line"/>
 
         <!-- end of rating form !-->
 

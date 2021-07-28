@@ -63,6 +63,7 @@ body {
 .side {
     grid-area: side;
     background-color: #639051;
+    /*639051*/
 }
 
 .main {
@@ -91,9 +92,9 @@ a.side:hover {color: #AFCCA4;}
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #C2D8B9;} /*light green */
-a:visited{color: #81AE6F;} /* darker green */
-a:hover{color: #AFCCA4;}    /* medium light green*/
+a:link{color: #9dd887;} /*light green */
+a:visited{color: #91c97f;} /* darker green */
+a:hover{color: #e2fcd8;}    /* medium light green*/
 
 
 /* Sub Heading Formatting */
@@ -124,4 +125,9 @@ a:hover{color: #AFCCA4;}    /* medium light green*/
 
 .search {
     width: 200px;
+}
+
+.line {
+    color: #9e2251;
+    border: 0.75px solid #9e2251;
 }
