@@ -37,7 +37,32 @@
 
         <form method="post" action="genre_search.php" enctype="multipart/form-data" >
 
-        <input class="search" type="text" name="genre" size="40" value="" required placeholder="Genre..." />
+        <select name="genre" required>
+            <option value="" disabled selected>genre...</option>
+            <?php
+            // retrieve unique values in genre column
+            $genre_sql="SELECT DISTINCT `Genre` FROM `book_reviews` ORDER BY `book_reviews`.`Genre` ASC";
+            $genre_query=mysqli_query($dbconnect, $genre_sql);
+            $genre_rs=mysqli_fetch_assoc($genre_query);
+
+            do {
+
+                ?>
+
+                <option value="<?php echo $genre_rs['Genre'];?>" ><?php echo $genre_rs['Genre'];?></option> 
+
+                <?php
+            } // end of genre option retrieval
+
+            while ($genre_rs=mysqli_fetch_assoc($genre_query));
+
+            ?>
+
+
+            
+
+
+        </select>
 
         <input class="submit" type ="submit" name="findall_genre" value="Search" />
         
