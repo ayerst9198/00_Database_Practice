@@ -45,6 +45,10 @@
         <!-- end of genre search !-->
         <hr class="line"/>
 
+        <i>Please use the drop down box to select ratings</i>
+
+        <hr class="line"/>
+
         <!-- start of rating form !-->
 
         <form method="post" action="rating_search.php" enctype="multipart/form-data">

@@ -86,16 +86,16 @@ h1, h2, h3, h4 {
 
 /* Side Links */
 a.side{font-weight: bold; text-decoration: none;}
-a.side:link, .nav a:visited {color: #C2D8B9;}
-a.side:hover {color: #AFCCA4;}
+a.side:link, .nav a:visited {color: #1d4e0a;}
+a.side:hover {color: #4d7e3b;}
 
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #9dd887;} /*light green */
-a:visited{color: #91c97f;} /* darker green */
-a:hover{color: #e2fcd8;}    /* medium light green*/
-
+a:link{color: #475f3e;} /*light green */
+a:visited{color: #1d4e0a;} /* darker green */
+a:hover{color: #4d7e3b;}    /* medium light green*/
+a:title{color: #ffffff}
 
 /* Sub Heading Formatting */
 .sub_heading {
@@ -128,6 +128,21 @@ a:hover{color: #e2fcd8;}    /* medium light green*/
 }
 
 .line {
-    color: #9e2251;
-    border: 0.75px solid #9e2251;
+    color: #054d3b;
+    border: 0.75px solid #054d3b;
+}
+
+.contact {
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.no-border {
+    border-width: 0;
+}
+
+.img-circle {
+    border-radius: 50%;
+    max-width: 85%;
+    height: auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.8);     
 }

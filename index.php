@@ -16,8 +16,9 @@
         is to add more reviews to this site as time allows.
     </p>
     <p>
-        If you'd like to suggest a book for review, please feel free
-        to get in touch
+        If you'd like to suggest a book for review,
+        <a href="contact.php"> please feel free to get in touch </a>
+        
     </p>
     
 </div>    <!-- / main -->

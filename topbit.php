@@ -41,12 +41,17 @@
 <body>
     
     <div class="wrapper">
-    
 
-        
         <div class="box banner">
-            
-            <h1>Orchid Readings</h1>
+
+            <a href="index.php">
+                <div class="box logo"  title="Logo - Click here to go to the Home Page">
+                <img class="img-circle" src="images\chair_logo_green.jpg" width="177" height="150" alt="generic logo" />
+                
+                </div>    <!-- / logo -->
+            </a>
+
+            <h1><a href="index.php" class="title">Orchid Readings</a> </h1>
         </div>    <!-- / banner -->
 
         
