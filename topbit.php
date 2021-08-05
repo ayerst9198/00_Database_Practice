@@ -32,7 +32,7 @@
     
     <!-- Edit the link below / replace with your chosen google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
-    
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
     <link rel="stylesheet" href="css/no_side.css"> 
     

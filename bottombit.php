@@ -12,7 +12,7 @@
 
         <input class="search" type="text" name="title" size="40" value="" required placeholder="Title..." />
 
-        <input class="submit" type ="submit" name="findall_title" value="Search" />
+        <input class="submit_wide" type ="submit" name="findall_title" value="&#xf002;" />
         
         </form>
 
@@ -26,13 +26,16 @@
 
         <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..." />
 
-        <input class="submit" type ="submit" name="findall_author" value="Search" />
+        <input class="submit_wide" type ="submit" name="findall_author" value="&#xf002;" />
         
         </form>
         <!-- end of author search !-->
 
         <hr class="line"/>
 
+        <i>Please use the drop down box to select genre or ratings</i>
+
+        <hr class="line"/>
         <!-- start of genre search !-->
 
         <form method="post" action="genre_search.php" enctype="multipart/form-data" >
@@ -64,15 +67,12 @@
 
         </select>
 
-        <input class="submit" type ="submit" name="findall_genre" value="Search" />
+        <input class="submit" type ="submit" name="findall_genre" value="&#xf002;" />
         
         </form>
         <!-- end of genre search !-->
         <hr class="line"/>
 
-        <i>Please use the drop down box to select ratings</i>
-
-        <hr class="line"/>
 
         <!-- start of rating form !-->
 
@@ -92,7 +92,7 @@
                 <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
             </select>
 
-            <input type="submit" class="submit" name="findall_rating" value="Search" />
+            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
             
             
             
